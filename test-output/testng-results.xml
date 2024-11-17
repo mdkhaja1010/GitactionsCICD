@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-16T11:42:29 IST" name="Default suite" finished-at="2024-11-16T11:44:15 IST" duration-ms="106126">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TextExecutor.TestRunner@1356d4d4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-11-16T11:42:29 IST" name="Default test" finished-at="2024-11-16T11:44:15 IST" duration-ms="106126">
+      <class name="com.TextExecutor.TestRunner">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.TextExecutor.TestRunner@1356d4d4]" started-at="2024-11-16T11:42:29 IST" name="beforeSuite" finished-at="2024-11-16T11:42:29 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.TextExecutor.TestRunner@1356d4d4]" started-at="2024-11-16T11:42:29 IST" name="setUpClass" finished-at="2024-11-16T11:42:30 IST" duration-ms="803" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4e3e11b9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TextExecutor.TestRunner@1356d4d4]" started-at="2024-11-16T11:42:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-16T11:44:12 IST" duration-ms="101822" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate the add to cart of the product"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["As a tester I want to validate the  Amazon Application"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TextExecutor.TestRunner@1356d4d4]" started-at="2024-11-16T11:42:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-16T11:43:29 IST" duration-ms="59451" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate the BestSeller page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["As a tester I want to validate the  BestSeller"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TextExecutor.TestRunner@1356d4d4]" started-at="2024-11-16T11:42:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-16T11:43:22 IST" duration-ms="51811" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate zoom in of search product"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["As a tester I want to validate the  Amazon Application"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.TextExecutor.TestRunner@1356d4d4]" started-at="2024-11-16T11:44:12 IST" name="tearDownClass" finished-at="2024-11-16T11:44:15 IST" duration-ms="3472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.TextExecutor.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
