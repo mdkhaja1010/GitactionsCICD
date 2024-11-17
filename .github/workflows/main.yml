@@ -10,7 +10,7 @@ on:
 
 jobs:
   setup_and_test:
-    runs-on: windows-latest
+    runs-on: demo123
 
     steps:
       # Step 1: Check out the repository
