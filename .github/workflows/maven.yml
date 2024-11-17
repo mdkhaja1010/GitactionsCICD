@@ -17,7 +17,7 @@ on:
 jobs:
   build:
 
-    runs-on: demo123
+    runs-on: cicd1234
 
     steps:
     - uses: actions/checkout@v4
