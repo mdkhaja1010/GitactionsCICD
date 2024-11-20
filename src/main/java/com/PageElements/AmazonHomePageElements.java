@@ -18,7 +18,7 @@ public class AmazonHomePageElements {
 	public WebElement electronicsbtn;
 	@FindBy(css="[id*='CardInstance'] div h1[class*='a-size-large']")
 	public WebElement electronicsText;
-	@FindBy(css="div[class*='p13n-gridRow'] div#gridItemRoot div a div[class*='_cDEzb_p']")
+	@FindBy(css="[class='a-link-normal'] [class*='_cDEzb_p']")
 	public List<WebElement> productslist;
 	@FindBy(css="[class*='reinventPricePriceToPayMargin priceToPay'] [class='a-price-whole']")
 	public WebElement beforecartprice;
