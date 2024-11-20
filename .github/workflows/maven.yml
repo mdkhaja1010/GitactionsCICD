@@ -5,14 +5,21 @@
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
-
 name: Java CI with Maven
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  workflow_dispatch:
+    inputs:
+      selectedTag:
+        description: "Select the tag to filter tests"
+        required: true
+        default: "@Smoke"
+        type: choice
+        options:
+          - "@Smoke"
+          - "@Regression"
+          - "@Sanity"
+          - "@E2E"
 
 jobs:
   build:
@@ -20,15 +27,27 @@ jobs:
     runs-on: cicd1234
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn clean test -D"dataproviderthreadcount=3 -Dcucumber.filter.tags=@Regression"
+
+    - name: Build and Test with Maven
+      run: mvn clean test -D"dataproviderthreadcount=3 -Dcucumber.filter.tags=${{ inputs.selectedTag }}"
+
+    - name: Generate Cucumber HTML Report
+      run: mvn verify -Dcucumber.report.output.name="cucumber-html-report"
+
+    - name: Archive Test Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-reports
+        path: target/site
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
