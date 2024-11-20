@@ -40,7 +40,8 @@ jobs:
         cache: maven
 
     - name: Build and Test with Maven
-      run: mvn clean test -D"dataproviderthreadcount=3 -Dcucumber.filter.tags=${{ inputs.selectedTag }}"
+      run: mvn clean test -D"dataproviderthreadcount"="3" -D"cucumber.filter.tags"="${{ inputs.selectedTag }}"
+      #mvn clean test -D"dataproviderthreadcount"="3" -D"cucumber.filter.tags"="@BestSeller"
 
     - name: Generate Cucumber HTML Report
       run: mvn verify -Dcucumber.report.output.name="cucumber-html-report"
