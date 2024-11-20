@@ -18,7 +18,7 @@ on:
         options:
           - "@Smoke"
           - "@Regression"
-          - "@BestBestSeller"
+          - "@BestSeller"
           - "@ShoppingToCart"
           - "@Sanity"
           - "@E2E"
