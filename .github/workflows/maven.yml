@@ -46,10 +46,10 @@ jobs:
       run: mvn verify -Dcucumber.report.output.name="cucumber-html-report"
 
     - name: Archive Test Results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-reports
-        path: target/site
+        path: ./target/site
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
