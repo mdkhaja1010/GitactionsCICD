@@ -37,9 +37,11 @@ jobs:
   archive-test-results:
     needs: build
     runs-on: Demo
+    if: always()  # This ensures the job runs even if 'build' fails
     steps:
     - name: Archive Test Results
       uses: actions/upload-artifact@v4
       with:
         name: test-reports
-        path: ./target/cucumber-reports
+        path: ./target/cucumber-reports/
+
