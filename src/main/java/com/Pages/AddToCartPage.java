@@ -23,7 +23,8 @@ public class AddToCartPage extends AddToCartPageElements {
     }
     
     public void addToCart() {
-    	reusableUtils.clickElement(addtoCart);
+    	//reusableUtils.clickElement(addtoCart);
+		reusableUtils.actionClickElement(addtoCart);
     }
     
     public void validatingProduct(String StrMobileName) {
@@ -46,7 +47,8 @@ public class AddToCartPage extends AddToCartPageElements {
     
      public void validatingCart(String cartpage) {
     	 reusableUtils.waittime();
-    	 String strExpected=reusableUtils.getElemText(validateCart);
+    	 String strExpected=reusableUtils.getElemText(deleteText);
+		 System.out.println("********************"+strExpected);
     	 boolean value=false;
     	 if(strExpected.contains(cartpage)) {
     		 value=true;

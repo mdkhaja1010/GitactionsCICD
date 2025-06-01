@@ -38,10 +38,13 @@ public class AddToCartPageDefs {
 	    addtocart.deleteProduct();
 	}
 
-	@And("Validate {string} page is displayed")
-	public void validate_page_is_displayed(String cartpage) {
-		String strPrice=driverUtilis.getScenarioContext().getContext(Context.PRICE).toString();
+	@And("Validate {string} text is displayed")
+	public void validate_text_is_displayed(String cartpage) {
+		//String deletedText= r
+		/*String strPrice=driverUtilis.getScenarioContext().getContext(Context.PRICE).toString();*/
 		addtocart.validatingCart(cartpage);
+
+
 	    
 	}
 }

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBys;
 public class AmazonHomePageElements {
 	@FindBy(css="#nav-hamburger-menu")
 	public WebElement homebutton;
-	@FindBy(css=".hmenu.hmenu-visible > li a[class*='hmenu']")
+	@FindBy(css="[class='hmenu hmenu-visible'] a[class='hmenu-item']")
 	public List<WebElement> bestsellerbtn;
 	@FindBy(css="#zg_banner_text")
 	public WebElement bestSellerstext;
@@ -18,7 +18,7 @@ public class AmazonHomePageElements {
 	public WebElement electronicsbtn;
 	@FindBy(css="[id*='CardInstance'] div h1[class*='a-size-large']")
 	public WebElement electronicsText;
-	@FindBy(css="[class='a-link-normal'] [class*='_cDEzb_p']")
+	@FindBy(css="[class*='a-link-normal'] [class*='_cDEzb_p']")
 	public List<WebElement> productslist;
 	@FindBy(css="[class*='reinventPricePriceToPayMargin priceToPay'] [class='a-price-whole']")
 	public WebElement beforecartprice;

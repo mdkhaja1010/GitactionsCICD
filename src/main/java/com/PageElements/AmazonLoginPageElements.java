@@ -10,7 +10,7 @@ public class AmazonLoginPageElements {
 	public WebElement searchbar;
 	@FindBy(css="#nav-search-submit-button")
 	public WebElement searchItem;
-    @FindBy(css="[class*='a-size-mini a-spacing-none']")
+    @FindBy(css="[class*='a-size-medium a-spacing-none']")
     public List<WebElement> selectedMobile;
     @FindBy(css="#imgTagWrapperId")
     public WebElement zoomin;

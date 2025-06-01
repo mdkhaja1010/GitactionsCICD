@@ -28,7 +28,7 @@ public class AmazonLoginPage extends AmazonLoginPageElements {
 	public void clkOnsearchedMobile() {
 		//String product=reusableUtils.getElemText(selectedMobile);
 		//reusableUtils.clickElement(selectedMobile);
-		String product="Samsung Galaxy A54 5G (Awesome Graphite, 8GB, 256GB Storage)";
+		String product="Samsung Galaxy S24 Ultra 5G AI Smartphone with Galaxy AI (Titanium Black, 12GB, 256GB Storage)";
 		for(int i=0;i<selectedMobile.size();i++) {
 		     if(selectedMobile.get(i).getText().contains(product)) {
 		    	 reusableUtils.clickElement(selectedMobile.get(i));

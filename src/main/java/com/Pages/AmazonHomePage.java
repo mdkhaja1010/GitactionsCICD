@@ -19,7 +19,7 @@ public class AmazonHomePage extends AmazonHomePageElements {
     public void clkOnHomebtn() {
     	reusableUtils.clickElement(homebutton);
     	for(int i=0;i<bestsellerbtn.size();i++) {
-    		if(bestsellerbtn.get(i).getText().contains("Best Sellers")) {
+    		if(bestsellerbtn.get(i).getText().contains("Bestsellers")) {
     			//bestsellerbtn.get(i).c
     			reusableUtils.clickElement(bestsellerbtn.get(i));
     			break;
@@ -39,7 +39,7 @@ public class AmazonHomePage extends AmazonHomePageElements {
     	reusableUtils.validateTextEqual(expectedStr, elepage, "electronics page is not displayed");
     }
     public String selectingProduct() {
-    	String product="boAt Bassheads 100 in Ear Wired Earphones with Mic(Black)";
+    	String product="Oneplus Bullets Z2 Bluetooth Wireless in Ear Earphones with Mic";
     	//realme Buds 2 Wired in Ear Earphones with Mic (Black)
     	for(int i=0;i<productslist.size();i++) {
     		if(productslist.get(i).getText().contains(product)) {
@@ -63,7 +63,7 @@ public class AmazonHomePage extends AmazonHomePageElements {
     	//reusableUtils.validateTextEqual(expectedText,check,);
     }
     public void clkCartbtn() {
-    	reusableUtils.clickElement(cartbtn);
+    	reusableUtils.actionClickElement(cartbtn);
     }
 
 	public void validatingPrice(String strCartPrice) {
