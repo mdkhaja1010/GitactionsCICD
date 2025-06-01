@@ -16,7 +16,7 @@ Feature: As a tester I want to validate the  BestSeller
     Then Validate price of the product
     And Click on delete button from shopping cart page
 
-   @Regression @BestSeller1
+   @Regression @BestSeller
      Scenario: Validate the Customer Service Page
       When Click on the customer service button
       And Select digital services and Device Support
