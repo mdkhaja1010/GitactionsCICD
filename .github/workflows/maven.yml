@@ -32,7 +32,7 @@ jobs:
         cache: maven
 
     - name: Build and Test with Maven
-      run: mvn clean test -D"dataproviderthreadcount"="3" -D"cucumber.filter.tags"="${{ inputs.selectedTag }}"
+      run: mvn clean test -D"dataproviderthreadcount"="2" -D"cucumber.filter.tags"="${{ inputs.selectedTag }}"
 
   archive-test-results:
     needs: build
