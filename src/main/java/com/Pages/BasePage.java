@@ -8,6 +8,7 @@ public class BasePage{
     private AddToCartPage addtocart;
     private AmazonLoginPage amazonLoginPage;
     private AmazonHomePage amazonhomepage;
+	private CustomerServiceElementsPage csepage;
     
     public BasePage(WebDriver webDriver){
 
@@ -23,6 +24,9 @@ public class BasePage{
 	}
 	public AmazonHomePage getAmazonHomePage() {
 		return (amazonhomepage == null) ? amazonhomepage = new AmazonHomePage(webDriver) : amazonhomepage;
+	}
+	public CustomerServiceElementsPage getcsepage() {
+		return (csepage == null) ? csepage = new CustomerServiceElementsPage(webDriver) : csepage;
 	}
 		
 }

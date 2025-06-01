@@ -16,4 +16,6 @@ public class AddToCartPageElements {
       public WebElement deleteText;
       @FindBy(css="[class='a-row'] [class*='a-spacing-mini']")
       public WebElement validateCart;
+
+
 }

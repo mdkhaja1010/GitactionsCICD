@@ -17,7 +17,7 @@ import failedTestCases.Retryy;
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = "com.StepDefinitions",
-        tags="@Regression",
+        tags="@BestSeller1",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty",

@@ -1,5 +1,8 @@
 package com.Enums;
 
 public enum Context {
-PRICE
+    PRICE,
+    TEXT,
+    PAGETEXT,
+    OTTTEXT,
 }
