@@ -2,3 +2,4 @@ open inspect
 click on console
 update the below code and hit enter and select the drop down or tool tip which is disappearing 
 setTimeout(()=>{debugger;},6000);
+this is the testing process
