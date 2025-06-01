@@ -3,4 +3,7 @@ click on console
 update the below code and hit enter and select the drop down or tool tip which is disappearing 
 setTimeout(()=>{debugger;},6000);
 this is the testing process
+Updated upstream
 then we have use the above methods
+this is the testing process to pause the console in developer tools
+Stashed changes
