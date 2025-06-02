@@ -1,0 +1,42 @@
+pipeline {
+    agent { label 'Demo' }
+
+    parameters {
+        choice(name: 'selectedTag', 
+               choices: ['@Smoke', '@Regression', '@BestSeller', '@ShoppingToCart', '@Sanity', '@E2E'], 
+               description: 'Select the tag to filter tests')
+    }
+
+    stages {
+        stage('Checkout Repository') {
+            steps {
+                git url: 'https://github.com/YOUR_USERNAME/YOUR_REPO.git', branch: 'main'
+            }
+        }
+
+        stage('Set up JDK 17') {
+            tools {
+                jdk 'JDK17'  // Configure this in Jenkins > Global Tool Configuration
+                maven 'Maven3' // Also configure Maven here
+            }
+        }
+
+        stage('Build and Test with Maven') {
+            steps {
+                sh 'mvn clean test -Ddataproviderthreadcount=2 -Dcucumber.filter.tags=${selectedTag}'
+            }
+        }
+
+        stage('Archive Test Results') {
+            steps {
+                archiveArtifacts artifacts: 'ExtentReports/**', allowEmptyArchive: true
+            }
+        }
+    }
+
+    post {
+        always {
+            junit 'target/surefire-reports/*.xml'
+        }
+    }
+}
