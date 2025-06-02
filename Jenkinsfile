@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Checkout Repository') {
             steps {
-                git url: 'https://github.com/mdkhaja1010/GitactionsCICD.git', branch: 'main'
+                git url: 'https://github.com/mdkhaja1010/GitactionsCICD.git', branch: 'master'
             }
         }
 
