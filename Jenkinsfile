@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-      choice(name: 'selectedTag', choices: ['@Smoke', '@Regression'], description: 'Select the tag to filter tests')
+       choice(name: 'selectedTag', choices: ['@Smoke', '@Regression', '@BestSeller', '@ShoppingCart'], description: 'Select the tag to filter tests')
     }
 
     stages {
