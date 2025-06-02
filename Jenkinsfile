@@ -2,22 +2,20 @@ pipeline {
     agent { label 'Demo' }
 
     parameters {
-        choice(name: 'selectedTag', 
-               choices: ['@Smoke', '@Regression', '@BestSeller', '@ShoppingToCart', '@Sanity', '@E2E'], 
+        choice(name: 'selectedTag',
+               choices: ['@Smoke', '@Regression', '@BestSeller', '@ShoppingToCart', '@Sanity', '@E2E'],
                description: 'Select the tag to filter tests')
+    }
+
+    environment {
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'  // Use your local JDK path
+        PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
     }
 
     stages {
         stage('Checkout Repository') {
             steps {
                 git url: 'https://github.com/mdkhaja1010/GitactionsCICD.git', branch: 'main'
-            }
-        }
-
-        stage('Set up JDK 17') {
-            tools {
-                jdk 'JDK17'  // Configure this in Jenkins > Global Tool Configuration
-                maven 'Maven3' // Also configure Maven here
             }
         }
 
