@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-       choice(name: 'selectedTag', choices: ['@Smoke', '@Regression', '@BestSeller', '@ShoppingCart'], description: 'Select the tag to filter tests')
+        choice(name: 'selectedTag', choices: ['@Smoke', '@Regression', '@BestSeller', '@ShoppingCart'], description: 'Select the tag to filter tests')
     }
 
     stages {
@@ -21,6 +21,17 @@ pipeline {
         stage('Archive Test Results') {
             steps {
                 archiveArtifacts artifacts: 'ExtentReports/**/*.*', allowEmptyArchive: true
+            }
+        }
+
+        stage('Publish HTML Report') {
+            steps {
+                publishHTML(target: [
+                    reportDir: 'ExtentReports',
+                    keepAll: true,
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: true
+                ])
             }
         }
     }
