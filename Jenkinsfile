@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'Demo' }
+    agent any
 
     parameters {
         choice(name: 'selectedTag',
